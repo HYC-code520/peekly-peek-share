@@ -69,16 +69,22 @@ const NotesPanel: React.FC = () => {
         opacity: isDragging ? 0.8 : 1,
       }}
     >
-      <Card className="overflow-hidden shadow-soft hover:shadow-hover note-card border border-peekly-purple-light">
+      <Card className="overflow-hidden shadow-soft hover:shadow-hover note-card border border-peekly-yellow-light">
         <div 
-          className="p-2 bg-peekly-purple-light flex items-center justify-between draggable-handle"
+          className="p-2 bg-peekly-yellow-light flex items-center justify-between draggable-handle"
           onMouseDown={handleMouseDown}
         >
           <div className="flex items-center gap-2">
-            <GripVertical size={18} className="text-peekly-purple-dark" />
-            <span className="text-sm font-medium text-peekly-purple-dark">Notes</span>
+            <GripVertical size={18} className="text-gray-800" />
+            <span className="text-sm font-medium text-gray-800">Notes</span>
+            {/* Small cat paw print */}
+            <div className="flex space-x-0.5">
+              <div className="w-1.5 h-1.5 bg-peekly-yellow rounded-full"></div>
+              <div className="w-1.5 h-1.5 bg-peekly-yellow rounded-full"></div>
+              <div className="w-1.5 h-1.5 bg-peekly-yellow rounded-full"></div>
+            </div>
           </div>
-          <button onClick={toggleMinimize} className="text-peekly-purple-dark hover:text-peekly-purple">
+          <button onClick={toggleMinimize} className="text-gray-800 hover:text-gray-600">
             {isMinimized ? 
               <Maximize2 size={16} /> : 
               <Minimize2 size={16} />
@@ -92,7 +98,7 @@ const NotesPanel: React.FC = () => {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Add your script or notes here..."
-              className="min-h-32 border-peekly-blue"
+              className="min-h-32 border-peekly-yellow-light bg-white/70"
             />
           </div>
         )}

@@ -14,12 +14,12 @@ const RecordButton: React.FC<RecordButtonProps> = ({ isRecording, onClick }) => 
       className={`
         relative flex items-center justify-center 
         rounded-full py-4 px-8 
-        text-white font-medium text-lg
+        text-gray-800 font-medium text-lg
         transition-all duration-300 
         shadow-soft hover:shadow-hover
         ${isRecording 
-          ? 'bg-red-500 hover:bg-red-600 min-w-36' 
-          : 'bg-peekly-purple hover:bg-peekly-purple-dark min-w-44'
+          ? 'bg-red-500 hover:bg-red-600 text-white min-w-36' 
+          : 'bg-peekly-yellow hover:bg-peekly-yellow-dark min-w-44'
         }
       `}
     >
