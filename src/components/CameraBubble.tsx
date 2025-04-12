@@ -110,22 +110,13 @@ const CameraBubble: React.FC<CameraBubbleProps> = ({ isRecording }) => {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-peekly-yellow">
-            {/* Cat face inside camera bubble when not using actual camera */}
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="relative w-3/4 h-3/4 bg-white rounded-full flex flex-col items-center justify-center">
-                {/* Cat eyes */}
-                <div className="flex w-1/2 justify-between mb-1">
-                  <div className="w-1.5 h-3 bg-black rounded-full animate-cat-blink"></div>
-                  <div className="w-1.5 h-3 bg-black rounded-full animate-cat-blink"></div>
-                </div>
-                {/* Cat nose */}
-                <div className="w-1.5 h-1.5 bg-peekly-peach rounded-full mb-0.5"></div>
-                {/* Cat mouth */}
-                <div className="w-3 h-1 flex justify-between">
-                  <div className="w-1 h-1 border-b border-black rounded"></div>
-                  <div className="w-1 h-1 border-b border-black rounded"></div>
-                </div>
-              </div>
+            {/* Cat image inside camera bubble when not using actual camera */}
+            <div className="w-3/4 h-3/4 bg-white rounded-full flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/59cd894f-4f7d-43a6-b135-6202349c39b9.png" 
+                alt="Peekly Cat" 
+                className="w-4/5 h-4/5 object-contain"
+              />
             </div>
           </div>
         )}

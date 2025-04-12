@@ -23,25 +23,12 @@ const AnimatedCat: React.FC<AnimatedCatProps> = ({
         {/* Cat body peeking from corner */}
         <div className="w-16 h-16 bg-peekly-yellow rounded-full flex items-center justify-center">
           {/* Cat face */}
-          <div className="relative w-12 h-12 bg-white rounded-full flex flex-col items-center justify-center">
-            {/* Cat eyes */}
-            <div className="flex w-6 justify-between mb-1">
-              <div className={`w-1.5 h-3 bg-black rounded-full ${isRecording ? 'animate-cat-blink' : ''}`}></div>
-              <div className={`w-1.5 h-3 bg-black rounded-full ${isRecording ? 'animate-cat-blink' : ''}`}></div>
-            </div>
-            {/* Cat nose */}
-            <div className="w-1.5 h-1.5 bg-peekly-peach rounded-full mb-0.5"></div>
-            {/* Cat mouth */}
-            <div className="w-4 h-1">
-              {isRecording ? (
-                <div className="w-3 h-2 mx-auto border-b-2 border-black rounded-b-full"></div>
-              ) : (
-                <div className="w-3 h-1 flex justify-between mx-auto">
-                  <div className="w-1 h-1 border-b border-black rounded"></div>
-                  <div className="w-1 h-1 border-b border-black rounded"></div>
-                </div>
-              )}
-            </div>
+          <div className="relative w-12 h-12 bg-white rounded-full flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/59cd894f-4f7d-43a6-b135-6202349c39b9.png" 
+              alt="Peekly Cat" 
+              className="w-10 h-10 object-contain"
+            />
           </div>
         </div>
         
